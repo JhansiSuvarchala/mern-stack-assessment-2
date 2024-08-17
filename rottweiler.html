@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rottweiler - Beautiful Dogs Blog</title>
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            min-height: 100vh; /* Ensure the body can grow beyond the viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden; /* Prevent scroll bars from appearing on body */
+            position: relative; /* Needed for positioning the pseudo-element */
+            background-color: #f4f4f4;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://t3.ftcdn.net/jpg/05/81/93/90/360_F_581939059_jpH6mal3F9DWoInkZTlC9HH0WJdyZrIC.jpg'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1; /* Ensure the background stays behind the content */
+        }
+
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        main {
+            text-align: left;
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 1em;
+            flex-grow: 1;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            max-height: calc(100vh - 4em); /* Adjust for header and footer */
+            overflow-y: auto; /* Allow vertical scrolling if content exceeds max-height */
+        }
+
+        img {
+            max-width: 100%; /* Adjusted size to fit content area */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #333;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rottweiler</h1>
+    </header>
+
+    <main>
+        <img src="https://t3.ftcdn.net/jpg/05/81/93/90/360_F_581939059_jpH6mal3F9DWoInkZTlC9HH0WJdyZrIC.jpg" alt="Rottweiler" height="500px" width="1000px">
+
+        <h2>About the Rottweiler</h2>
+        <p>Rottweilers are confident, fearless dogs with a robust build. They are known for their loyalty and protective nature, making them excellent guard dogs. Originally bred to drive cattle to market, they are strong, hardworking, and versatile dogs.</p>
+        
+        <h2>Characteristics</h2>
+        <p>Rottweilers have a powerful, muscular body with a broad chest and a solid frame. They are known for their calm demeanor but can be very protective of their families. They require a firm, consistent hand in training.</p>
+
+        <h2>Care</h2>
+        <p>Rottweilers need regular exercise and mental stimulation to stay happy and healthy. They require a balanced diet to maintain their muscular physique. Grooming needs are moderate, with regular brushing to keep their coat in good condition.</p>
+
+        <a href="index.html">&larr; Back to Dog Information</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Beautiful Dogs Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>

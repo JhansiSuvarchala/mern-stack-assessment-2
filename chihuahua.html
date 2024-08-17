@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chihuahua - Beautiful Dogs Blog</title>
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            min-height: 100vh; /* Ensure the body can grow beyond the viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden; /* Prevent scroll bars from appearing on body */
+            position: relative; /* Needed for positioning the pseudo-element */
+            background-color: #f4f4f4;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://assets.wfcdn.com/im/76889042/compr-r85/4307/43074468/Hanging+Chihuahua+Puppy+Statue.jpg'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1; /* Ensure the background stays behind the content */
+        }
+
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        main {
+            text-align: left;
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 1em;
+            flex-grow: 1;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            max-height: calc(100vh - 4em); /* Adjust for header and footer */
+            overflow-y: auto; /* Allow vertical scrolling if content exceeds max-height */
+        }
+
+        img {
+            max-width: 100%; /* Adjusted size to fit content area */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #333;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chihuahua</h1>
+    </header>
+
+    <main>
+        <img src="https://assets.wfcdn.com/im/76889042/compr-r85/4307/43074468/Hanging+Chihuahua+Puppy+Statue.jpg" alt="Chihuahua" height="500px" width="1000px">
+
+        <h2>About the Chihuahua</h2>
+        <p>The Chihuahua is the smallest dog breed, known for its big personality in a tiny package. They are highly devoted to their owners and can be very protective despite their small size. They are lively, alert, and full of energy.</p>
+        
+        <h2>Characteristics</h2>
+        <p>Chihuahuas have a distinctive apple-shaped head, large eyes, and erect ears. They are often seen as lap dogs but require proper training and socialization to ensure they don't become overly possessive or aggressive.</p>
+
+        <h2>Care</h2>
+        <p>Chihuahuas need minimal grooming but should be brushed regularly to keep their coat in good condition. They are prone to dental issues, so regular dental care is essential. They enjoy short walks and playtime but should not be overexerted.</p>
+
+        <a href="index.html">&larr; Back to Dog Information</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Beautiful Dogs Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>

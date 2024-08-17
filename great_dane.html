@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Dane - Beautiful Dogs Blog</title>
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            min-height: 100vh; /* Ensure the body can grow beyond the viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden; /* Prevent scroll bars from appearing on body */
+            position: relative; /* Needed for positioning the pseudo-element */
+            background-color: #f4f4f4;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.dogsforsales.in//uploaded_files/8ea6cf6788c2eb.jpg'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1; /* Ensure the background stays behind the content */
+        }
+
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        main {
+            text-align: left;
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 1em;
+            flex-grow: 1;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            max-height: calc(100vh - 4em); /* Adjust for header and footer */
+            overflow-y: auto; /* Allow vertical scrolling if content exceeds max-height */
+        }
+
+        img {
+            max-width: 100%; /* Adjusted size to fit content area */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #333;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Great Dane</h1>
+    </header>
+
+    <main>
+        <img src="https://www.dogsforsales.in//uploaded_files/8ea6cf6788c2eb.jpg" alt="Great Dane" height="500px" width="1000px">
+
+        <h2>About the Great Dane</h2>
+        <p>The Great Dane, often referred to as the "gentle giant," is one of the largest dog breeds. Despite their imposing size, they are known for their gentle and friendly nature. They are excellent family pets, known for their loyalty and patience.</p>
+        
+        <h2>Characteristics</h2>
+        <p>Great Danes have a sleek, muscular body with a deep chest and a long, elegant neck. They are dignified and regal, with a calm temperament. Despite their size, they are surprisingly graceful and require regular exercise to keep them fit.</p>
+
+        <h2>Care</h2>
+        <p>Great Danes require a large space to move around comfortably. They need regular exercise and a balanced diet tailored to large breeds. Due to their short coat, they require minimal grooming, but their size means they need special attention when it comes to joint and bone health.</p>
+
+        <a href="index.html">&larr; Back to Dog Information</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Beautiful Dogs Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>

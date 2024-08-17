@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poodle - Beautiful Dogs Blog</title>
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            min-height: 100vh; /* Ensure the body can grow beyond the viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden; /* Prevent scroll bars from appearing on body */
+            position: relative; /* Needed for positioning the pseudo-element */
+            background-color: #f4f4f4;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/lancaster-puppies-laravel/image/upload/v1680188495/breeds/a5qeoo3bjfgf47nqaivs.jpg'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1; /* Ensure the background stays behind the content */
+        }
+
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        main {
+            text-align: left;
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 1em;
+            flex-grow: 1;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            max-height: calc(100vh - 4em); /* Adjust for header and footer */
+            overflow-y: auto; /* Allow vertical scrolling if content exceeds max-height */
+        }
+
+        img {
+            max-width: 100%; /* Adjusted size to fit content area */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #333;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Poodle</h1>
+    </header>
+
+    <main>
+        <img src="https://cdn.prod.website-files.com/5f7adfe5ed7d773f90050d9e/627499b029c8d366a371b423_poodle-malaysia.jpg" alt="Poodle" height="500px" width="1000px">
+
+        <h2>About the Poodle</h2>
+        <p>Poodles are highly intelligent and elegant dogs, known for their hypoallergenic curly coats. They come in three sizes: Standard, Miniature, and Toy, all of which are known for their lively and playful nature.</p>
+        
+        <h2>Characteristics</h2>
+        <p>Poodles are active and love to be the center of attention. They are known for their versatility, excelling in obedience, agility, and even as therapy dogs. Their curly coats require regular grooming to keep them looking their best.</p>
+
+        <h2>Care</h2>
+        <p>Poodles need regular exercise to stay mentally and physically stimulated. They require consistent grooming, including regular baths, haircuts, and ear cleanings to prevent infections.</p>
+
+        <a href="index.html">&larr; Back to Dog Information</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Beautiful Dogs Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>

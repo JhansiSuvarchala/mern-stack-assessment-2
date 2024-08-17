@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Dogs Blog</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: auto;
+            margin: 0;
+        }
+
+        header {
+            background: #ce4ca5;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin-bottom: 1em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            background: #35b8c6;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #35b8c6;
+        }
+
+        main {
+            text-align: center;
+            padding: 1em;
+            flex-grow: 1;
+            padding-top: 70px; /* Offset for sticky header */
+        }
+
+        section {
+            display: none;
+        }
+
+        section:target {
+            display: block;
+        }
+
+        .dog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 2em;
+        }
+
+        .dog-card {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .dog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .dog-card a {
+            display: block;
+            margin-top: 10px;
+            color: #ce4ca5;
+            text-decoration: none;
+        }
+
+        .dog-card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #333;
+            color: #fff;
+            width: 100%;
+        }
+
+        /* Contact form styling */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1em;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background: #ce4ca5;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 1em;
+            font-size: 1em;
+            border-radius: 4px;
+        }
+ 
+        input[type="submit"]:hover {
+            background: #ce4ca5;
+        }
+
+        /* Home section layout */
+        .home-content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #fff;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5em;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #ce4ca5;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content sections for each post and category */
+        .post-content, .category-content {
+            display: none;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Cute Puppies Blog🐾🦴</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">Know About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home-content">
+                <div class="main-content">
+                    <h1 style="font-size: xx-large;">Dog Information🐕🐾</h1>
+                    <h2 style="font-size: xx-large;">Welcome to our blog where we share information about different dog breeds.</h2>
+    <p><strong>Author:</strong> Jhansi Suvarchala | <strong>Date:</strong> August 18, 2024</p><br>
+    <p style="font-size: x-large;">
+        Our mission is to provide valuable insights and help dog enthusiasts learn more about their favorite breeds. 
+        We cover various topics including breed characteristics, care tips, and interesting facts to help you become a better dog owner.
+    </p>
+                    <aside class="sidebar">
+                    <h2>Recent Posts</h2>
+                    <ul>
+                        <li><a href="latest-news.html">Latest News</a></li>
+                        <li><a href="dog-care-tips.html">Dog Care Tips</a></li>
+                        <li><a href="puppy-training.html">Puppy Training</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="about">
+            <h1>Know About Us</h1>
+            <div class="dog-grid">
+                <div class="dog-card">
+                    <h2>Labrador</h2>
+                    <img src="https://res.cloudinary.com/lancaster-puppies-laravel/image/upload/v1680188495/breeds/a5qeoo3bjfgf47nqaivs.jpg" alt="Labrador Retriever">
+                    <a href="labrador.html">Learn more about Labrador Retriever</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>German Shepherd</h2>
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/SPcKaZWR2dtmFwfiytUDtva_Aa8=/0x159:2003x2162/fit-in/828x1500/filters:format_auto():extract_cover():upscale()/2019/08/07/875/n/24155406/9ffb00255d4b2e079b0b23.01360060_.jpg" alt="German Shepherd">
+                    <a href="german_shepherd.html">Learn more about German Shepherd</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Golden Retriever</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLFYQMyuFmoJTICcSp2M-RPFCxSC8oNYLsnw&s" alt="Golden Retriever">
+                    <a href="golden_retriever.html">Learn more about Golden Retriever</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Bulldog</h2>
+                    <img src="https://puppiezo.com/wp-content/uploads/2023/06/Bulldog-.jpg" alt="Bulldog">
+                    <a href="bulldog.html">Learn more about Bulldog</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Poodle</h2>
+                    <img src="https://cdn.prod.website-files.com/5f7adfe5ed7d773f90050d9e/627499b029c8d366a371b423_poodle-malaysia.jpg" alt="Poodle">
+                    <a href="poodle.html">Learn more about Poodle</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Beagle</h2>
+                    <img src="https://i.pinimg.com/736x/a2/41/bf/a241bf580bd666a05de1fa3b53f973e7.jpg" alt="Beagle">
+                    <a href="beagle.html">Learn more about Beagle</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Rottweiler</h2>
+                    <img src="https://t3.ftcdn.net/jpg/05/81/93/90/360_F_581939059_jpH6mal3F9DWoInkZTlC9HH0WJdyZrIC.jpg" alt="Rottweiler">
+                    <a href="rottweiler.html">Learn more about Rottweiler</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Siberian Husky</h2>
+                    <img src="https://tiimg.tistatic.com/fp/1/007/867/2-kilogram-weight-siberian-husky-brown-white-with-blue-eyes-male-pet-dog--472.jpg" alt="Siberian Husky">
+                    <a href="siberian_husky.html">Learn more about Siberian Husky</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Shih Tzu</h2>
+                    <img src="https://i.pinimg.com/564x/b1/a9/70/b1a970bc3929cc8295d6723f71b62aeb.jpg" alt="Shih Tzu">
+                    <a href="shih_tzu.html">Learn more about Shih Tzu</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Chihuahua</h2>
+                    <img src="https://assets.wfcdn.com/im/76889042/compr-r85/4307/43074468/Hanging+Chihuahua+Puppy+Statue.jpg" alt="Chihuahua">
+                    <a href="chihuahua.html">Learn more about Chihuahua</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Great Dane</h2>
+                    <img src="https://www.dogsforsales.in//uploaded_files/8ea6cf6788c2eb.jpg" alt="Great Dane">
+                    <a href="great_dane.html">Learn more about Great Dane</a>
+                </div>
+
+                <div class="dog-card">
+                    <h2>Boxer</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx8c4mEA10ubQ92QkWJcJAteXYY4NLXNmz8Q&s" alt="Boxer">
+                    <a href="boxer.html">Learn more about Boxer</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    
+    
+    <footer>
+        <p>&copy; 2024 Cute Puppies Blog. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        function loadContent(page) {
+            document.getElementById('content-frame').src = page;
+        }
+    </script>
+</body>
+</html>

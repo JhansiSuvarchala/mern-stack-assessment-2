@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siberian Husky - Beautiful Dogs Blog</title>
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            min-height: 100vh; /* Ensure the body can grow beyond the viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden; /* Prevent scroll bars from appearing on body */
+            position: relative; /* Needed for positioning the pseudo-element */
+            background-color: #f4f4f4;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://tiimg.tistatic.com/fp/1/007/867/2-kilogram-weight-siberian-husky-brown-white-with-blue-eyes-male-pet-dog--472.jpg'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1; /* Ensure the background stays behind the content */
+        }
+
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        main {
+            text-align: left;
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 1em;
+            flex-grow: 1;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            max-height: calc(100vh - 4em); /* Adjust for header and footer */
+            overflow-y: auto; /* Allow vertical scrolling if content exceeds max-height */
+        }
+
+        img {
+            max-width: 100%; /* Adjusted size to fit content area */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #333;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Siberian Husky</h1>
+    </header>
+
+    <main>
+        <img src="https://tiimg.tistatic.com/fp/1/007/867/2-kilogram-weight-siberian-husky-brown-white-with-blue-eyes-male-pet-dog--472.jpg" alt="Siberian Husky" height="500px" width="1000px">
+
+        <h2>About the Siberian Husky</h2>
+        <p>The Siberian Husky is a medium-sized working dog known for its wolf-like appearance and endurance. They are friendly, alert, and outgoing, making them excellent family pets for active households. Their intelligence and independent nature can sometimes make them a challenge to train.</p>
+        
+        <h2>Characteristics</h2>
+        <p>Siberian Huskies have a thick double coat that comes in a variety of colors and markings. They have striking blue or multicolored eyes and erect triangular ears. They are known for their boundless energy and love for running.</p>
+
+        <h2>Care</h2>
+        <p>Siberian Huskies require regular exercise to prevent boredom and maintain their health. Their thick coat needs to be brushed regularly, especially during shedding seasons. They are generally healthy dogs but require regular veterinary check-ups to ensure their well-being.</p>
+
+        <a href="index.html">&larr; Back to Dog Information</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Beautiful Dogs Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
